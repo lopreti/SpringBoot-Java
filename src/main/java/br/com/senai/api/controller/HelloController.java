@@ -1,5 +1,6 @@
 package br.com.senai.api.controller;
 
+import br.com.senai.api.pessoa.DadosCadastrosPessoa;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -17,7 +18,7 @@ public class HelloController {
     }
 
     @PostMapping
-    public String olaPost(@RequestBody Pessoa pessoa){
-        return pessoa.getNome();
+    public String olaPost(@RequestBody DadosCadastrosPessoa dados){
+        return dados.nome();
     }
 }
